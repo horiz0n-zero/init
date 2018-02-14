@@ -1,0 +1,7 @@
+La commande nslookup 10.51.1.253 nous donne le type : DHCP
+
+Server:		10.51.1.42
+Address:	10.51.1.42#53
+
+Non-authoritative answer:
+253.1.51.10.in-addr.arpa	name = dhcp.42.fr.

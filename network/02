@@ -1,0 +1,2 @@
+#!/bin/sh
+ifconfig en0 | grep 'inet ' | cut -c7- | sed 's/ .*//'

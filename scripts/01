@@ -1,0 +1,1 @@
+sudo cat /etc/passwd | grep -v -E '^#' | cut -d: -f1,3,6

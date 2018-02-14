@@ -1,0 +1,7 @@
+#!/bin/bash 
+if [ -d "$1" ]
+then
+	ls -lhS "$1"
+else
+	echo "this is not a directory or is nil ..."
+fi

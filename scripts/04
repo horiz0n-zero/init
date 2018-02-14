@@ -1,0 +1,17 @@
+#!/bin/bash 
+FILE="/tmp/checksum"
+TARGET="/etc/crontab"
+MD5VALUE=$(md5sum $TARGET)
+
+if [ ! -f $FILE ]
+then
+	echo "$MD5VALUE" > $FILE
+	exit 0;
+fi;
+
+if [ "$MD5VALUE" != "$(cat $FILE)" ]
+then
+	echo "$MD5VALUE" > $FILE
+	echo "$TARGET has been modified !" | mail -s "$TARGET modified !" root
+fi;
+#crontab -e '0 0 * * *' crontab.guru**
